@@ -27,12 +27,12 @@ public class level1 {
         System.out.println("Task 1: \n");
 
         // Process the example input
-        //processFile("level1\\level1\\level1-eg.txt", "level1\\level1\\out\\level1-eg.txt");
+        //processFile("level1/level1-eg.txt", "level1/out/level1-eg.txt");
 
         // Process the real levels 1-4
 
         for (int i = 1; i <= 4; i++) {
-            processFile("level1\\level1\\level1-" + i + ".txt", "level1\\level1\\out\\level1-" + i + ".txt");
+            processFile("level1/level1-" + i + ".txt", "level1/out/level1-" + i + ".txt");
         }
 
     }
