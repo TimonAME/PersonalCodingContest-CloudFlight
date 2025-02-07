@@ -13,7 +13,7 @@ public class level8 {
     private static final double HUB_CHANGE_TIME = 300.0;
     private static final int MAX_STOPS = 100;
     private static int MAX_ATTEMPTS;
-    private static final int MAX_ROUTES = 80;
+    private static final int MAX_ROUTES = 10;
 
     private static class Location {
         String name;
@@ -116,6 +116,9 @@ public class level8 {
 
         // Set MAX_ATTEMPTS based on problem size
         MAX_ATTEMPTS = Math.max(10000, numberOfLocations * numberOfJourneys * 100);
+        if (MAX_ATTEMPTS > 1000000) {
+            MAX_ATTEMPTS = 1000000;
+        }
 
         // Find optimal system
         HyperloopSystem system = findOptimalSystem(locations, journeys, hub,
@@ -246,6 +249,7 @@ public class level8 {
 
                      if (benefits >= targetBenefits) {
                          System.out.println("Found solution with exact or more benefits!");
+                         bestSystem = system;
                          break;  // Exit the loop
                      }
 
