@@ -116,8 +116,8 @@ public class level8 {
 
         // Set MAX_ATTEMPTS based on problem size
         MAX_ATTEMPTS = Math.max(10000, numberOfLocations * numberOfJourneys * 100);
-        if (MAX_ATTEMPTS > 1000000) {
-            MAX_ATTEMPTS = 1000000;
+        if (MAX_ATTEMPTS > 10000000) {
+            MAX_ATTEMPTS = 10000000;
         }
 
         // Find optimal system
